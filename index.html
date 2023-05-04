@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <title>Recette</title>
+</head>
+<body>
+    <nav>
+        <div id="search-container">
+            <i class="fa-solid fa-spoon"></i>
+            <p>CLICK HERE TO SEE OR SEARCH</p>
+        </div>
+        <div class="links-container">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="http://127.0.0.1:5501/catalogue.html">CATEGORIES</a>
+            <a href="#information">INFORMATION</a>
+            <a href="http://127.0.0.1:5501/detaile.html">DETAILS</a>
+        </div>
+        <div class="humberger" onclick="drop()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div id="search">
+        <div class="input-container">
+            <input type="text" placeholder="SEARCH" id="recherche">
+            <i class="fa-solid fa-spoon" id="tap"></i>
+        </div>
+        <div class="links-hide">
+            <a href="#home" onclick="undrop()">HOME</a>
+            <a href="#about" onclick="undrop()">ABOUT</a>
+            <a href="http://127.0.0.1:5501/catalogue.html" onclick="undrop()">CATEGORIES</a>
+            <a href="#information" onclick="undrop()">INFORMATION</a>
+            <a href="http://127.0.0.1:5501/detaile.html">DETAILS</a>
+        </div>
+        <button onclick="undrop()">X</button> 
+        <div class="foods">
+            <a href="http://127.0.0.1:5501/detaile.html#1" class="food" id="Foul Modammas">Foul Modammas</a>
+            <a href="http://127.0.0.1:5501/detaile.html#2" class="food" id="Mansaf">Mansaf</a>
+            <a href="http://127.0.0.1:5501/detaile.html#3" class="food" id="Makaroni bel Bechamel">Makaroni bel Bechamel</a>
+            <a href="http://127.0.0.1:5501/detaile.html#4" class="food" id="Kabsa au poulet">Kabsa au poulet</a>
+            <a href="http://127.0.0.1:5501/detaile.html#5" class="food" id="Makloubeh">Makloubeh</a>
+            <a href="http://127.0.0.1:5501/detaile.html#6" class="food" id="Couscous aux légumes">Couscous aux légumes</a>
+            <a href="http://127.0.0.1:5501/detaile.html#7" class="food" id="Tajine de poulet aux olives">Tajine de poulet aux olives</a>
+            <a href="http://127.0.0.1:5501/detaile.html#8" class="food" id="Chorba Frik">Chorba Frik</a>
+            <a href="http://127.0.0.1:5501/detaile.html#9" class="food" id="Koushari">Koushari</a>
+            <a href="http://127.0.0.1:5501/detaile.html#10" class="food" id="Köfte">Köfte</a>
+            <p style="
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #F5631A;
+            display: none;
+            "
+            id="not-found">SORRY WE DONT HAVE THIS FOOD</p>
+        </div>
+    </div>
+
+
+    <!-- the grey background that show after click on search-container -->
+    <div id="shadow">
+    </div>
+    <!------------------------------------------------------------------->
+
+    <section id="home">
+        <div class="container-left">
+            <h1>FOOD IS A GIFT</h1>
+            <h3>Welcome to my kitchen to see our categories</h3>
+            <a href="#categories">Click here</a>
+            <h4>And if u want to contact us here is the links</h4>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="img-container">
+                <img src="assets/img2.jpg" alt="food">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container-right">
+            <div class="img-container">
+                <img src="assets/img1.jpg" alt="food">
+            </div>
+        </div>
+        <div class="introduction">
+            <h1>WHAT IS RECETTE ?</h1>
+            <p>
+                 recipe typically includes a list of ingredients needed to prepare a dish, as well as specific measurements for each ingredient. These measurements may be given in volume (e.g. cups, teaspoons) or weight (e.g. grams, ounces), depending on the recipe and the country where it originated. The recipe will also include instructions on how to prepare the dish, such as what cooking techniques to use (e.g. sautéing, baking) and for how long to cook the dish.
+
+Recipes can be found in many different formats, including cookbooks, magazines, websites, and social media platforms. They can range from simple recipes with just a few ingredients and steps, to more complex recipes that require multiple techniques and hours of preparation. Some recipes may also include tips or variations for adapting the recipe to suit different tastes or dietary needs.
+
+In addition to providing instructions for preparing food, recipes can also serve as a way to preserve culinary traditions and cultural heritage. They can be passed down through generations of families, and can be a way of connecting people to their cultural roots. Recipes can also be adapted and modified over time, as new ingredients or cooking techniques become available.
+            </p>
+        </div>
+    </section>
+    <section id="categories">
+        <h1>OUR CATEGORIES</h1>
+        <div class="categorie-container">
+            <div class="slider">
+                <div class="food-container">
+                    <div class="image-container">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <img src="" alt="food" class="photo">
+                        <h4 class="name"></h4>
+                        <p>CATEGORIE <span class="price"></span></p>
+                        <div class="btn-container">
+                            <a href="#" class="buy">ORDER NOW</a>
+                            <a href="#" class="info" target="_blank">MORE INFORMATION</a>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <img src="" alt="food" class="photo">
+                        <h4 class="name"></h4>
+                        <p>CATEGORIE <span class="price"></span></p>
+                        <div class="btn-container">
+                            <a href="#" class="buy">ORDER NOW</a>
+                            <a href="#" class="info" target="_blank">MORE INFORMATION</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-container">
+                    <div class="image-container">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <img src="" alt="food" class="photo">
+                        <h4 class="name"></h4>
+                        <p>CATEGORIE <span class="price"></span></p>
+                        <div class="btn-container">
+                            <a href="#" class="buy">ORDER NOW</a>
+                            <a href="#" class="info" target="_blank">MORE INFORMATION</a>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <img src="" alt="food" class="photo">
+                        <h4 class="name"></h4>
+                        <p>CATEGORIE <span class="price"></span></p>
+                        <div class="btn-container">
+                            <a href="#" class="buy">ORDER NOW</a>
+                            <a href="#" class="info" target="_blank">MORE INFORMATION</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <button class="btn left" onclick="left()"><</button>
+                <button class="btn right" onclick="right()">></button>
+                <a href="http://127.0.0.1:5501/catalogue.html" id="link-to-categorie-page" target="_blank">SEE MORE</a>
+        </div>
+        
+    </section>
+    <footer id="information">
+        <div id="info-personnel">
+            <h2>Information Personnel</h2>
+            <p>NAME : GOURMAT AHMED</p>
+            <p>MAT : 212135004208</p>
+            <p>EMAIL : GRMIDOU15@GMAIL.COM</p>
+            <p>SECTION : ISIL A</p>
+            <p>GROUPE : 1</p>
+        </div>
+        <div id="contact">
+            <h2>CONTACT AS HERE</h2>
+            <p>EMAIL : RECETTE@GMAIL.COM</p>
+            <p>+21333214452</p>
+            <p>LOCALISATION : BAB EZZOUAR</p>                
+            <p><i class="fa-brands fa-facebook"></i> RECETTE</p>
+            <p><i class="fa-brands fa-twitter"></i> RECETTE_PWEB</p>
+            <p><i class="fa-brands fa-instagram"></i> RECETTE_PWEB</p>
+        </div>
+        <div class="copyright">
+            &copy; ALL COPYRIGHT RESERVED 
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
